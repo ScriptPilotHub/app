@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Booklingio — Booking, Deposits, Payouts</title>
+    <meta name="description" content="Booklingio helps solo professionals launch booking, deposits, and payouts in minutes." />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='black'/><text x='50' y='62' text-anchor='middle' font-size='52' fill='white' font-family='Arial'>B</text></svg>" />
+    <link rel="stylesheet" href="/style.css" />
+    <script type="module" src="/app.js"></script>
+  </head>
+  <body>
+    <div id="app" class="app">
+      <header class="shell-header">
+        <div class="brand">
+          <span class="logo">B</span>
+          <div>
+            <h1>Booklingio</h1>
+            <p>Booking + deposits + payouts</p>
+          </div>
+        </div>
+        <nav class="top-nav" aria-label="Primary">
+          <a href="#/dashboard">Dashboard</a>
+          <a href="#/calendar">Calendar</a>
+          <a href="#/services">Services</a>
+          <a href="#/payments">Payments</a>
+          <button class="ghost" id="quick-copy">Copy booking link</button>
+        </nav>
+        <div class="top-actions">
+          <button class="ghost" id="theme-toggle">Dark</button>
+          <button class="primary" id="new-booking">New booking</button>
+        </div>
+      </header>
+
+      <aside class="shell-sidebar">
+        <a class="sidebar-link" href="#/login">Login</a>
+        <a class="sidebar-link" href="#/onboarding">Onboarding</a>
+        <a class="sidebar-link" href="#/dashboard">Dashboard</a>
+        <a class="sidebar-link" href="#/calendar">Smart calendar</a>
+        <a class="sidebar-link" href="#/services">Services</a>
+        <a class="sidebar-link" href="#/availability">Availability</a>
+        <a class="sidebar-link" href="#/clients">Clients</a>
+        <a class="sidebar-link" href="#/payments">Payments</a>
+        <a class="sidebar-link" href="#/settings">Settings</a>
+        <div class="sidebar-card">
+          <p class="eyebrow">Connect payouts</p>
+          <h3>Stripe Connect</h3>
+          <p class="muted">Receive deposits to your bank automatically.</p>
+          <button class="primary" data-action="connect-stripe">Connect payouts</button>
+        </div>
+      </aside>
+
+      <main class="shell-main" id="route-outlet" tabindex="-1"></main>
+    </div>
+
+    <div class="toast-stack" id="toast-stack" aria-live="polite"></div>
+
+    <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-modal="true">
+      <div class="modal-backdrop" data-modal-close></div>
+      <div class="modal-content" role="document">
+        <header>
+          <h3 id="modal-title">Quick action</h3>
+          <button class="icon-button" data-modal-close aria-label="Close modal">×</button>
+        </header>
+        <div id="modal-body"></div>
+      </div>
+    </div>
+
+    <div class="drawer" id="drawer" aria-hidden="true" role="dialog" aria-modal="true">
+      <div class="drawer-backdrop" data-drawer-close></div>
+      <div class="drawer-panel" role="document">
+        <header>
+          <h3 id="drawer-title">Booking detail</h3>
+          <button class="icon-button" data-drawer-close aria-label="Close drawer">×</button>
+        </header>
+        <div id="drawer-body"></div>
+      </div>
+    </div>
+
+    <noscript>
+      <div class="noscript">
+        Booklingio needs JavaScript enabled to run the single-page experience.
+      </div>
+    </noscript>
+  </body>
+</html>
