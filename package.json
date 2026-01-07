@@ -1,0 +1,9 @@
+{
+  "name": "booklingio",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Booklingio SPA",
+  "scripts": {
+    "build": "echo 'no build step'"
+  }
+}
