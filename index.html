@@ -6,8 +6,7 @@
     <title>Booklingio — Booking, Deposits, Payouts</title>
     <meta name="description" content="Booklingio helps solo professionals launch booking, deposits, and payouts in minutes." />
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='black'/><text x='50' y='62' text-anchor='middle' font-size='52' fill='white' font-family='Arial'>B</text></svg>" />
-    <link rel="stylesheet" href="/style.css" />
-    <script type="module" src="/app.js"></script>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div id="app" class="app">
@@ -50,7 +49,13 @@
         </div>
       </aside>
 
-      <main class="shell-main" id="route-outlet" tabindex="-1"></main>
+      <main class="shell-main" id="route-outlet" tabindex="-1">
+        <section class="card">
+          <p class="eyebrow">Loading Booklingio</p>
+          <h2>Preparing your workspace</h2>
+          <p class="muted">If this takes more than a few seconds, refresh the page.</p>
+        </section>
+      </main>
     </div>
 
     <div class="toast-stack" id="toast-stack" aria-live="polite"></div>
@@ -82,5 +87,6 @@
         Booklingio needs JavaScript enabled to run the single-page experience.
       </div>
     </noscript>
+    <script type="module" src="app.js"></script>
   </body>
 </html>
