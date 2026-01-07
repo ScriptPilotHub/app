@@ -1,0 +1,383 @@
+:root {
+  color-scheme: light;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  background: #0a0f1f;
+  color: #f5f7ff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #1a2244, #090c18 55%, #05070f 100%);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  border-radius: 999px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button.primary {
+  background: linear-gradient(120deg, #6f7dff, #8f6bff);
+  color: white;
+  box-shadow: 0 20px 40px rgba(111, 125, 255, 0.3);
+}
+
+button.secondary {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+}
+
+button.full {
+  width: 100%;
+}
+
+.app-shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+.top-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.top-nav nav {
+  display: flex;
+  gap: 1.25rem;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.logo {
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+  align-items: center;
+}
+
+.hero-copy h1 {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  line-height: 1.1;
+  margin: 1rem 0;
+}
+
+.hero-copy p {
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.hero-meta {
+  margin-top: 1rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+}
+
+.hero-card {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 24px;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+}
+
+.hero-card-header {
+  display: flex;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.hero-card-body h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.slot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.slot {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.5rem;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.slot input {
+  display: none;
+}
+
+.slot.selectable {
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.slot.selectable:has(input:checked) {
+  border-color: rgba(143, 107, 255, 0.6);
+  background: rgba(143, 107, 255, 0.15);
+}
+
+.section {
+  margin-top: 5rem;
+}
+
+.section h2 {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  margin-bottom: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card h3 {
+  margin-bottom: 0.75rem;
+}
+
+.pricing-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.price {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
+.card ul {
+  list-style: none;
+  display: grid;
+  gap: 0.6rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.card.highlight {
+  border: 1px solid rgba(143, 107, 255, 0.6);
+  box-shadow: 0 20px 40px rgba(143, 107, 255, 0.2);
+}
+
+@media (max-width: 720px) {
+  .top-nav nav {
+    display: none;
+  }
+
+  .top-nav {
+    flex-wrap: wrap;
+  }
+}
+
+.dashboard {
+  margin-top: 3rem;
+  display: grid;
+  gap: 2.5rem;
+}
+
+.dashboard-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dashboard-hero h1 {
+  margin-bottom: 0.75rem;
+  font-size: clamp(1.8rem, 3vw, 2.3rem);
+}
+
+.eyebrow {
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.dashboard-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.list {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.list-item p {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.9rem;
+}
+
+.list-meta {
+  display: grid;
+  gap: 0.4rem;
+  text-align: right;
+  font-size: 0.85rem;
+}
+
+.pill {
+  display: inline-flex;
+  align-self: flex-end;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(143, 107, 255, 0.2);
+  border: 1px solid rgba(143, 107, 255, 0.4);
+}
+
+.availability {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.availability-row {
+  display: flex;
+  justify-content: space-between;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.service-list {
+  list-style: none;
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.service-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.booking {
+  margin-top: 3rem;
+  display: grid;
+  gap: 2rem;
+}
+
+.booking-hero {
+  padding: 1.5rem 2rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.booking-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.selectable {
+  gap: 1rem;
+  border-radius: 16px;
+  padding: 0.75rem;
+  align-items: center;
+}
+
+.selectable.selected {
+  border: 1px solid rgba(143, 107, 255, 0.6);
+  background: rgba(143, 107, 255, 0.1);
+}
+
+.muted {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+}
+
+.form {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+input {
+  width: 100%;
+  padding: 0.7rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(4, 6, 12, 0.6);
+  color: white;
+}
+
+label {
+  display: grid;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+}
