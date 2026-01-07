@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini invoice & booking</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="hero">
+        <p class="badge">Subscription</p>
+        <h1>Mini invoice & booking</h1>
+        <p class="subtitle">
+          Collect payments, send invoices, and manage bookings in one place.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>Start for $14.99 / month</h2>
+        <p class="muted">
+          A small processing fee is added at checkout to cover card costs.
+        </p>
+
+        <div class="price-breakdown" id="priceBreakdown">
+          <div>
+            <span>Subscription</span>
+            <strong id="basePrice">$14.99</strong>
+          </div>
+          <div>
+            <span>Processing fee</span>
+            <strong id="processingFee">$0.00</strong>
+          </div>
+          <div class="total">
+            <span>Total today</span>
+            <strong id="totalPrice">$0.00</strong>
+          </div>
+        </div>
+
+        <form id="checkoutForm">
+          <label>
+            Email for your receipts
+            <input
+              type="email"
+              name="email"
+              placeholder="you@company.com"
+              autocomplete="email"
+            />
+          </label>
+          <button type="submit">Continue to secure checkout</button>
+          <p class="fine-print">You can cancel anytime from the customer portal.</p>
+        </form>
+      </section>
+    </main>
+
+    <script src="app.js" type="module"></script>
+  </body>
+</html>
